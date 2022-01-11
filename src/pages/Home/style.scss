@@ -1,0 +1,200 @@
+main{
+    display: flex;
+}
+.geral {
+    display: flex;
+    flex-direction: column;
+
+    &-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 20px 0 270px;
+    }
+
+    &-cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &-content {
+        display: flex;
+        border: 1px solid #dfe0eb;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    &-chart {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 80%;
+
+        &-mounth {
+            color: #9fa2b4;
+            font-size: 10px;
+            margin-top: 10px;
+        }
+        
+    }
+
+    &-details {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+
+        &-data {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #dfe0eb;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-label {
+            color: #9fa2b4;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        &-title {
+            text-decoration: underline;
+        }
+    }
+
+    &-sales {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+.table {
+        margin-right: 10px;
+        display: flex;
+        border: 1px solid #dfe0eb;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 700px;
+        height: 400px;
+        padding: 5px;
+        flex-direction: column;
+
+        height: 300px;
+    ::-webkit-scrollbar-track {
+        background-color: #cecece;
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+        background: #F4F4F4;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #fc3c8d;
+        border-radius: 8px;
+
+    }
+
+    &-header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 5px 30px 5px 20px;
+
+        &-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-value {
+            color: #2f80ed;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        &-data {
+            color: #fc3c8d;
+            font-size: 14;
+            border: none;
+            text-decoration: underline;
+            padding: 0 10px;
+            background-color: #F4F4F4;
+            
+        }
+    }
+
+
+    &-main {
+        overflow-y: auto;  
+        scrollbar-color: #fc3c8d;
+        &-box {
+            border-bottom: 1px solid #dfe0eb;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            
+            &-loja{
+                font-weight: bold;
+                width: 70%;
+            }
+            &-item {
+                color: #9fa2b4;
+                padding: 5px 10px;
+                border-radius: 10px;
+                width: 50%;
+                &-align{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.bg-blue{
+    color: #fff;
+    background-color: #2f80ed;
+}
+.bg-yellow{
+    color: #fff;
+    background-color: #fec400;
+}
+
+
+@media screen and (max-width: 800px) {
+    .geral {
+        &-content {
+            display: flex;
+            flex-direction: column;
+        }
+        &-chart {
+            width: 100%;
+        }
+        &-details {
+            width: 100%;
+
+            &-data {
+                padding: 10px;
+            }
+        }
+        &-sales {
+            flex-direction: column;
+
+        }
+        &-store {
+            margin-bottom: 10px;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .geral {
+        &-container {
+            margin: 0 10px 0 10px;
+        }
+    }
+}
